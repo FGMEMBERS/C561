@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.460 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.150 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.460 </x-m>
+      <y-m> -0.149 </y-m>
+      <z-m>  0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- OILTEMP -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/oiltemp/oiltemp.xml</path>
+    <offsets>
+      <x-m>  0.460 </x-m>
+      <y-m> -0.049 </y-m>
+      <z-m>  0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- OILPRESSURE -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/oilpressure/oilpressure.xml</path>
+    <offsets>
+      <x-m> 0.460 </x-m>
+      <y-m> 0.049 </y-m>
+      <z-m> 0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TACH -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m> 0.460 </x-m>
+      <y-m> 0.149 </y-m>
+      <z-m> 0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.460 </x-m>
+      <y-m> -0.096 </y-m>
+      <z-m> -0.042 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TURN -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.460 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.042 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.460 </x-m>
+      <y-m>  0.096 </y-m>
+      <z-m> -0.042 </z-m>
+    </offsets>
+  </model>
+
+  <!-- CLOCK -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m>  0.463 </x-m>
+      <y-m> -0.240 </y-m>
+      <z-m>  0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- MAN -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/man/man.xml</path>
+    <offsets>
+      <x-m>  0.460 </x-m>
+      <y-m> -0.194 </y-m>
+      <z-m> -0.036 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FUELSELECTOR -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/fuelselector/fuelselector.xml</path>
+    <offsets>
+      <x-m> 0.460 </x-m>
+      <y-m> 0.240 </y-m>
+      <z-m> 0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FUEL -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m>  0.460 </x-m>
+      <y-m>  0.240 </y-m>
+      <z-m> -0.015 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FUELPRESSURE -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/fuelpressure/fuelpressure.xml</path>
+    <offsets>
+      <x-m>  0.460 </x-m>
+      <y-m>  0.240 </y-m>
+      <z-m> -0.085 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

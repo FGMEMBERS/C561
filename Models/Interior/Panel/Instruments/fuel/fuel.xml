@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>fuel.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle0</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle0</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>needle0</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/fuelselector</property>
+        <value> 0 </value> 
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>needle1</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/fuelselector</property>
+        <value> 1 </value> 
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>needle2</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/fuelselector</property>
+        <value> 2 </value> 
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- 210 lbs -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle0</object-name>
+    <property>consumables/fuel/tank[0]/level-gal_us</property>
+    <interpolation> 
+      <entry><ind>  0.0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 17.5 </ind><dep> 123 </dep></entry>
+      <entry><ind> 35.0 </ind><dep> 245 </dep></entry>
+    </interpolation>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+    
+  <!-- 150 lbs -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle1</object-name>
+    <property>consumables/fuel/tank[1]/level-gal_us</property>
+    <interpolation> 
+      <entry><ind>  0.0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 12.5 </ind><dep> 123 </dep></entry>
+      <entry><ind> 25.0 </ind><dep> 245 </dep></entry>
+    </interpolation>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+ 
+  <!-- 210 lbs -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle2</object-name>
+    <property>consumables/fuel/tank[2]/level-gal_us</property>
+    <interpolation> 
+      <entry><ind>  0.0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 17.5 </ind><dep> 123 </dep></entry>
+      <entry><ind> 35.0 </ind><dep> 245 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+ 
+</PropertyList>
+

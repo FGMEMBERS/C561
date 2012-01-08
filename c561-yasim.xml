@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Caudron C 561 Utilisation du FDM du C460 pour le moment
+
+     sources      : http://www.aviafrance.com/caudron-c-561-aviation-france-750.htm
+
+     Masse a vide : 600 kg (1323 lb)
+     Envergure    : 6.670 m
+     Longueur     : 7.510 m
+     Hauteur      : 2.194 m
+     Moteur       : Renault 446 12 cyl inverses. 450 cv a 4500 tr/m
+     Vitesse max  : 500 km/h (270 kts)
+
+     ******************************************************************************
+
+     Caudron C 460 - 2011 BARANGER Emmanuel
+           updated - 2011 Philippe BROCORENS
+ 
+     sources      : http://www.aviafrance.com/caudron-c-460-aviation-france-748.htm
+                    http://en.wikipedia.org/wiki/Caudron_C.460
+
+     Envergure    : 6.75 m
+     Longueur     : 7.12 m
+     Hauteur      : 1.80 m
+     Masse a vide : 530 Kg (1168.45 lb)
+     Moteur       : Renault 456 6 cyl inline inverses. 300 cv
+     Vitesse max  : 500 km/h (270 kts)
+-->
+
+<airplane mass="1168.45" >
+
+  <approach speed="58" aoa="6" fuel="0.3">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
+  </approach>
+  
+  <cruise speed="220" alt="5000" fuel="0.8">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.7" />
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
+  </cruise>
+
+  <cockpit x="-0.475" y="0" z="0.502"/>
+
+  <fuselage ax="3.259" ay="0" az="0.156" bx="-3.552" by="0" bz="0.006" width="0.675" taper="0.5" midpoint="0.3"/>
+
+  <wing x="0.976" y="0.313" z="-0.284" 
+        chord="1.5" 
+        length="3.040" 
+        taper="0.33"
+        sweep="-3.5"
+        dihedral="1.7"
+        camber="0.01">
+        <stall aoa="20" width="1" peak="1.5"/>
+        <flap0 start="0.027" end="0.535" lift="1.5" drag="1.4"/>
+        <flap1 start="0.560" end="0.895" lift="1.5" drag="1.3"/>
+
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+        <control-output control="FLAP1" side="left" prop="surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="surface-positions/right-aileron-pos-norm"/>
+
+  </wing>
+  
+  <hstab x="-2.592" y="0" z="0.177" 
+         chord="0.808" 
+         length="1.170" 
+         taper="0.43"
+         sweep="2"> 
+         <stall aoa="18" width="1" peak="1.5"/>
+         <flap0 start="0.15" end="0.85" lift="1.5" drag="1.3"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-2.978" y="0" z="-0.081" 
+         chord="1.092" 
+         length="1.215" 
+         taper="0.4"
+         sweep="0">
+         <stall aoa="16" width="1" peak="1.5"/>
+         <flap0 start="0.24" end="0.85" lift="1.5" drag="1.3"/>
+
+         <control-input axis="/controls/flight/rudder" square="true" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"  min="1" max="-1"/>
+  </vstab>
+
+  <!-- Engines   source            : http://www.hydroretro.net/etudegh/renault.pdf
+
+                 name              : Renault 456
+                 type              : 6 cyl inline inverses. 300 cv
+                 power cruise      : 300 hp
+                 weight            : 418.88 lb  ( 190 kg  )
+                 displacement      : 
+                 compression       : 
+  -->
+  <propeller x="2.5" y="0" z="-0.170"
+             mass="418.88"
+             radius="0.92"
+             moment="25"
+             cruise-power="250"
+             cruise-speed="220"
+             cruise-rpm="2200"
+             cruise-alt="5000">
+             <actionpt x="3.339" y="0" z="0.156"/>
+             <piston-engine eng-rpm="2700"
+                            eng-power="300">
+                            <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+                            <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+                            <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+                            <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
+             </piston-engine>
+  </propeller>
+
+  <!-- left main -->
+  <gear x="1.464" y=" 0.925" z="-1.091" 
+        compression="0.2"
+        retract-time="5"
+        spring="0.8"
+        damp="4.2"
+        sfric="0.6"
+        dfric="0.8"
+        initial-load="0"
+        upx="-0.3" upy="0" upz="1">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-speed control="EXTEND" transition-time="4.9"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+  </gear>
+
+  <!-- right main -->
+  <gear x="1.464" y="-0.925" z="-1.091"
+        compression="0.2"
+        retract-time="5"
+        spring="0.8"
+        damp="4.2"
+        sfric="0.6"
+        dfric="0.8"
+        initial-load="0"
+        upx="-0.3" upy="0" upz="1">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-speed control="EXTEND" transition-time="5.2"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+  </gear>
+
+  <!-- Tail wheel -->
+  <gear x="-3.171" y="0" z="-0.250"
+        compression="0.1" 
+        spring="0.8"
+        on-solid="1"
+        sfric="1"
+        dfric="1"
+        upx="0.4" upy="0" upz="1">
+  </gear>
+
+  <!-- Fuel  --> 
+  <tank x="1.137" y=" 1.228" z="-0.270" capacity="210"/>
+  <tank x="1.223" y=" 0.000" z="-0.000" capacity="150"/>
+  <tank x="1.137" y="-1.228" z="-0.270" capacity="210"/>
+
+  <!-- Mass distribution
+  <ballast x="-2" y="0" z="-1" mass="1500"/>
+  -->
+
+</airplane>
+
