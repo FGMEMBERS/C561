@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -141,5 +141,42 @@
     </offsets>
   </model>
 
-</PropertyList>
+  <!-- COMPASS -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.466 </x-m>
+      <y-m> -0.257 </y-m>
+      <z-m> -0.082 </z-m>
+    </offsets>
+  </model>
 
+  <!-- SWITCH -->
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/Switch/batt-lights.xml</path>
+    <offsets>
+      <x-m>  0.466 </x-m>
+      <y-m> -0.140 </y-m>
+      <z-m>  0.130 </z-m>
+    </offsets>
+  </model>
+
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/Switch/nav-lights.xml</path>
+    <offsets>
+      <x-m>  0.466 </x-m>
+      <y-m> -0.105 </y-m>
+      <z-m>  0.130 </z-m>
+    </offsets>
+  </model>
+
+  <model> 
+    <path>Aircraft/C561/Models/Interior/Panel/Instruments/Switch/instr-lights.xml</path>
+    <offsets>
+      <x-m>  0.466 </x-m>
+      <y-m> -0.070 </y-m>
+      <z-m>  0.130 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
